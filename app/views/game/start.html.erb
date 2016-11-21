@@ -1,0 +1,11 @@
+<h1>Game#start</h1>
+<!-- <p>Find me in app/views/game/start.html.erb</p> -->
+<p>Here is your grid:</p>
+<p><%= @grid %></p>
+<h3>Whats your best shot?</h3>
+<form action="/result" method="GET">
+  <input type="text" name="shot">
+  <input type="hidden" name="grid" value="<%= @grid %>"/>
+  <input type="hidden" name="start_time" value="<%= @start_time %>"/>
+  <input type="submit">
+</form>
